@@ -1,21 +1,19 @@
 class Task
-  attr_accessor :id, :body, :field, :completed
-  def initialize(id, body, field, completed)
+  attr_accessor :id, :body, :completed
+  def initialize(id, body, completed)
     @id = id
     @body = body
-    @field = field
     @completed = completed
   end
 
   def to_json(_ = nil)
     {
       id: id,
-      body: body,
-      field: field
+      body: body
     }.to_json
   end
 
   def completed?
-    @completed = false
+    @completed == true
   end
 end

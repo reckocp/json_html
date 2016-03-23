@@ -9,12 +9,11 @@ require_relative '../lib/all'
 module App
   # Place all data here inside of a method
   def App.tasks
-    # This is an example
     @all_tasks ||= [
-      { body: "Walk the dog", field: @completed, id: 1},
-      { body: "Go to the grocery store", field: @completed, id: 2},
-      { body: "Pay the bills", field: @completed, id: 3},
-      { body: "Do homework", field: @completed, id: 4},
+      (Task.new(1, "Walk the dog", false)),
+      (Task.new(2, "Go to the grocery store", false)),
+      (Task.new(3, "Pat the bills", false)),
+      (Task.new(4, "Do homework", false))
     ]
   end
 end

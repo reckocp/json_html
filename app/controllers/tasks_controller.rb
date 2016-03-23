@@ -31,7 +31,7 @@ class TasksController < ApplicationController
     new_id = last_task.id + 1
 
     App.tasks.push(
-      Task.new(new_id, params["body"], params["field"])
+      Task.new(new_id, params["body"])
     )
     puts App.tasks.to_json
 
@@ -43,10 +43,6 @@ class TasksController < ApplicationController
     if task
       unless params["body"].nil? || params["body"].empty?
         task.body = params["body"]
-      end
-
-      unless params["field"].nil? || params["field"].empty?
-        task.field = params["field"]
       end
 
       render task.to_json, status: "200 OK"
