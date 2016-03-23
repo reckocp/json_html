@@ -17,7 +17,7 @@ module App
       { message: "eehhh tweet", id: 4},
     ]
   end
-
+end
 system('clear')
 
 # Initialize a TCPServer object that will listen
