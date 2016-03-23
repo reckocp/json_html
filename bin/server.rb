@@ -18,7 +18,10 @@ module App
     ]
   end
 end
+<<<<<<< a847eb4ddd78a7fc0e42e8c100d85b396702773b
 
+=======
+>>>>>>> Closed loop
 system('clear')
 
 # Initialize a TCPServer object that will listen
