@@ -22,6 +22,7 @@ class TasksController < ApplicationController
       render_not_found
     end
   end
+
   def new
     render_template 'tasks/new.html.erb'
   end
@@ -31,7 +32,7 @@ class TasksController < ApplicationController
     new_id = last_task.id + 1
 
     App.tasks.push(
-      Task.new(new_id, params["body"])
+      Task.new(new_id, params["body"], false)
     )
     puts App.tasks.to_json
 
